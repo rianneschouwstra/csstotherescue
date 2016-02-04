@@ -1,0 +1,249 @@
+/* FONTS */
+@font-face{
+	font-family: Ampersand;
+	src: local('Bookman Old Style');
+	unicode-range: U+26;
+}
+
+/* 
+	GENERAL 
+*/
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	border:none;
+	transition: 0.25s;
+}
+
+body{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(to right, #9C0000 33.3%, #FF9191 66.6%, #FFCBCB 0);
+    background-size: 16px 100%;
+}
+
+body>header, 
+main article,
+footer{
+	background:#fff;
+	box-shadow: 0 5px 4px -4px black;
+}
+
+ul{
+	padding: 0;
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+}
+
+img{
+	width: 100%;
+}
+
+/* HEADINGS*/
+h1, h2{
+	font-family: Ampersand, 'Roboto', sans-serif;
+}
+
+h1{
+	font-weight: 400;
+}
+
+h2{
+	font-weight: 300;
+	margin-bottom: 0.5em;
+}
+
+/* 
+	HEADER 
+*/
+
+body>header{
+	width: 17.5%;
+	max-width: 300px;
+	min-width: 200px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background: #9C0000;
+    color:#fff;
+}
+
+header figure{
+	width:33%;
+}
+
+header img {
+	border-radius: 50%;
+	border: 5px solid #FF9191;
+}
+
+/* 
+	NAVIGATION
+*/
+
+body>header nav{
+	padding: 1em;
+}
+
+body>header nav li {
+    padding: 0.5em;
+}
+
+body>header nav a{
+	width: 100%;
+	padding: 0.5em;
+	color: #fff;
+}
+
+body>header nav a:hover {
+    background: #FF9191;
+}
+
+header nav ul li:first-of-type svg {
+    fill: #5ECBFB;
+}
+
+header nav ul li:nth-of-type(2) svg {
+    fill: #655EFB;;
+}
+
+header nav ul li:nth-of-type(3) svg {
+    fill: #5EFB92;;
+}
+
+header nav ul li:nth-of-type(4) svg {
+    fill: #FB5E5E;
+}
+
+/* 
+	MAIN CONTENT 
+*/
+
+main{
+	width: 70%;
+	padding: 1em;
+}
+
+main article,
+footer{
+	padding: 2em;
+	margin-top: 1em;
+	border-top: 0.25em solid #9C0000;
+
+}
+
+main article:hover,
+footer:hover{
+	border-top: 0.25em solid #FF9191;
+}
+
+#password{
+	width: 20%;
+	min-width: 222px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* FORM */
+fieldset{
+	padding: 0;
+}
+
+label {
+    display: block;
+}
+
+input, button, label span {
+    width: 100%;
+    padding: 0.5em;
+	margin: 0.25em;
+}
+
+input {
+    border-bottom: 1px solid #9C0000;
+	outline: none;
+}
+
+input:hover, input:focus{
+	border-bottom: 1px solid #FF9191;
+	color: #FF9191;
+}
+
+button{
+	cursor: pointer;
+    margin: 1em 0;
+    color: #fff;
+    background: #9C0000;
+    border-radius: 0.5em;
+}
+
+button:hover{
+	background: #FF9191;
+}
+
+/* FIGURE */
+article figure {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+/* 
+	FOOTER
+*/
+footer{
+	width:100%;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 2em;
+}
+
+footer section{
+	width: 15%;
+}
+
+footer a{
+	color: #000;
+	padding:0.5em;
+}
+
+footer a:hover{
+	color: #FF9191;
+}
+
+pre {
+    white-space: pre-line;
+}
+
+@media (max-width: 690px){
+	body>header{
+		width: 65%;
+		max-width: 1000px;
+		min-width: 0;
+	}
+	#password{
+		width: 100%;
+		min-width: 0;
+	}
+}
+
+@media (max-width: 500px){
+	body>header{
+		width: 95%;
+	}
+	main{
+		width: 100%;
+	}
+}
