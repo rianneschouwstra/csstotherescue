@@ -228,7 +228,7 @@ pre {
     white-space: pre-line;
 }
 
-@media (min-width: 690px){
+@media (max-width: 690px){
 	body>header{
 		width: 65%;
 		max-width: 1000px;
@@ -240,7 +240,7 @@ pre {
 	}
 }
 
-@media (min-width: 500px){
+@media (max-width: 500px){
 	body>header{
 		width: 95%;
 	}

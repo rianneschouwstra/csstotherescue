@@ -239,7 +239,8 @@ footer{
 }
 
 footer section{
-	width: 15%;
+	width: 100%;
+	padding: 1em;
 }
 
 footer a{
@@ -262,6 +263,9 @@ pre {
 	#password{
 		width: 20%;
 		min-width: 300px;
+	}
+	footer section{
+		width: 20%;
 	}
 
 }
