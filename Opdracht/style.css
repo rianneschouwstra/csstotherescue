@@ -1,7 +1,10 @@
 /* FONTS */
-@font-face{
+@font-face {
 	font-family: Ampersand;
-	src: local('Bookman Old Style');
+	src: local('Felix Titling'),
+		local('Bell MT'),
+		local('Elephant'),
+		local('Bookman Old Style');
 	unicode-range: U+26;
 }
 
@@ -9,7 +12,7 @@
 	GENERAL 
 */
 
-*{
+* {
 	box-sizing: border-box;
 	margin: 0;
 	list-style: none;
@@ -19,7 +22,7 @@
 	        transition: 0.25s;
 }
 
-body{
+body {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -33,17 +36,17 @@ body{
 	font-family: 'Roboto', sans-serif;
 	background: -webkit-linear-gradient(left, #C15656 33.3%, #FF9191 66.6%, #FFCBCB 0);
 	background: linear-gradient(to right, #C15656 33.3%, #FF9191 66.6%, #FFCBCB 0);
-    background-size: 16px 100%;
+    background-size: 1em 100%;
 }
 
 body>header, 
 main article,
-footer{
+footer {
 	background:#fff;
 	box-shadow: 0 5px 4px -4px black;
 }
 
-ul{
+ul {
 	padding: 0;
 }
 
@@ -52,20 +55,20 @@ svg {
     height: 1em;
 }
 
-img{
+img {
 	width: 100%;
 }
 
 /* HEADINGS*/
-h1, h2{
+h1, h2 {
 	font-family: Ampersand, 'Roboto', sans-serif;
 }
 
-h1{
+h1 {
 	font-weight: 400;
 }
 
-h2{
+h2 {
 	font-weight: 300;
 	margin-bottom: 0.5em;
 }
@@ -74,7 +77,7 @@ h2{
 	HEADER 
 */
 
-body>header{
+body>header {
 	width: 95%;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -96,12 +99,12 @@ body>header{
             align-self: flex-start;
 }
 
-body>header h1{
+body>header h1 {
 	text-align: center;
 	padding:0.5em;
 }
 
-header figure{
+header figure {
 	width: 50%;
 	padding: 0.5em;
 }
@@ -115,7 +118,7 @@ header img {
 	NAVIGATION
 */
 
-body>header nav{
+body>header nav {
 	width: 100%;
 }
 
@@ -123,7 +126,7 @@ body>header nav li {
     width: 100%;
 }
 
-body>header nav a{
+body>header nav a {
 	width: 100%;
 	padding: 0.5em;
 	color: #fff;
@@ -134,7 +137,7 @@ body>header nav a:hover {
     background: #FF9191;
 }
 
-header nav ul li:first-of-type svg {
+a[href='#profile-picture'] svg {
     fill: #5ECBFB;
 }
 
@@ -154,13 +157,13 @@ header nav ul li:nth-of-type(4) svg {
 	MAIN CONTENT 
 */
 
-main{
+main {
 	width: 100%;
 	padding: 1em;
 }
 
 main article,
-footer{
+footer {
 	padding: 2em;
 	margin-top: 1em;
 	border-top: 0.25em solid #9C0000;
@@ -168,16 +171,17 @@ footer{
 }
 
 main article:hover,
-footer:hover{
+footer:hover {
 	border-top: 0.25em solid #FF9191;
 }
 
 p {
     line-height: 1.5;
+    max-width: 35em;
 }
 
 /* FORM */
-fieldset{
+fieldset {
 	padding: 0;
 }
 
@@ -196,12 +200,12 @@ input {
 	outline: none;
 }
 
-input:hover, input:focus{
+input:hover, input:focus {
 	border-bottom: 1px solid #FF9191;
 	color: #FF9191;
 }
 
-button{
+button {
 	cursor: pointer;
     margin: 1em 0;
     color: #fff;
@@ -209,7 +213,7 @@ button{
     border-radius: 0.5em;
 }
 
-button:hover{
+button:hover {
 	background: #FF9191;
 }
 
@@ -223,7 +227,7 @@ article figure {
 /* 
 	FOOTER
 */
-footer{
+footer {
 	width:100%;
 	display:-webkit-box;
 	display:-webkit-flex;
@@ -238,17 +242,17 @@ footer{
 	padding: 2em;
 }
 
-footer section{
+footer section {
 	width: 100%;
 	padding: 1em;
 }
 
-footer a{
+footer a {
 	color: #000;
-	padding:0.5em;
+	padding: 0.5em;
 }
 
-footer a:hover{
+footer a:hover {
 	color: #FF9191;
 }
 
@@ -256,27 +260,27 @@ pre {
     white-space: pre-line;
 }
 
-@media (min-width: 500px){
-	body>header{
+@media (min-width: 30em) {
+	body>header {
 		width: 65%;
 	}
-	#password{
+	#password {
 		width: 20%;
-		min-width: 300px;
+		min-width: 17.5em;
 	}
-	footer section{
+	footer section {
 		width: 20%;
 	}
 
 }
 
-@media (min-width: 690px){
-	body>header{
+@media (min-width: 45em) {
+	body>header {
 		width: 20%;
-    	max-width: 350px;
-		min-width: 200px;
+    	max-width: 20em;
+		min-width: 12.5em;
 	}
-	main{
+	main {
 		width: 70%;
 	}
 }
