@@ -1,0 +1,442 @@
+/* FONTS */
+
+/* 5.25 Fancy Ampersands */
+@font-face {
+	font-family: Ampersand;
+	src: local('Felix Titling'),
+		local('Bell MT'),
+		local('Elephant'),
+		local('Bookman Old Style');
+	unicode-range: U+26;
+}
+
+/* 
+	GENERAL 
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	border:none;
+	-webkit-transition: 0.25s;
+	        transition: 0.25s;
+}
+
+body {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	font-family: 'Roboto', sans-serif;
+	background: -webkit-linear-gradient(left, #C15656 33.3%, #FF9191 66.6%, #FFCBCB 0);
+	background: linear-gradient(to right, #C15656 33.3%, #FF9191 66.6%, #FFCBCB 0);
+    background-size: 1em 100%;
+}
+
+body>header, 
+main article,
+footer {
+	background:#fff;
+	box-shadow: 0 5px 4px -4px black;
+}
+
+ul {
+	padding: 0;
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+}
+
+/* HEADINGS*/
+h1, h2 {
+	font-family: Ampersand, 'Roboto', sans-serif;
+}
+
+h1 {
+	font-weight: 400;
+}
+
+h2 {
+	font-weight: 300;
+	margin-bottom: 0.5em;
+}
+
+/* 
+	HEADER 
+*/
+
+body>header {
+	width: 95%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #9C0000;
+    color:#fff;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+}
+
+body>header h1 {
+	text-align: center;
+	padding:0.5em;
+}
+
+header figure {
+	width: 50%;
+	padding: 0.5em;
+}
+
+header img {
+	width: 100%;
+	border-radius: 50%;
+	border: 5px solid #FF9191;
+}
+
+/* 
+	NAVIGATION
+*/
+
+body>header nav {
+	width: 100%;
+}
+
+body>header nav li {
+    width: 100%;
+}
+
+body>header nav a {
+	width: 100%;
+	padding: 0.5em;
+	color: #fff;
+	display: block;
+}
+
+body>header nav a:hover {
+    background: #FF9191;
+}
+
+a[href='#profile-picture'] svg {
+    fill: #5ECBFB;
+}
+
+header {
+	display: block;
+}
+
+header nav ul li:nth-of-type(2) svg {
+    fill: #655EFB;
+}
+
+header nav ul li:nth-of-type(3) svg {
+    fill: #5EFB92;
+}
+
+header nav ul li:nth-of-type(4) svg {
+    fill: #FB5E5E;
+}
+
+/* 
+	MAIN CONTENT 
+*/
+
+main {
+	width: 100%;
+	padding: 1em;
+}
+
+main article,
+footer {
+	padding: 2em;
+	margin-top: 1em;
+	border-top: 0.25em solid #9C0000;
+
+}
+
+main article:hover,
+footer:hover {
+	border-top: 0.25em solid #FF9191;
+}
+
+p {
+    line-height: 1.5;
+    max-width: 50em;
+}
+
+/* FORM */
+fieldset {
+	padding: 0;
+}
+
+legend {
+	padding-bottom: 0.5em;
+}
+
+label {
+    display: block;
+}
+
+input, button, label span {
+    width: 100%;
+    padding: 0.5em;
+	margin: 0.25em;
+}
+
+input {
+    border-bottom: 1px solid #9C0000;
+	outline: none;
+}
+
+input:hover, input:focus {
+	border-bottom: 1px solid #FF9191;
+	color: #FF9191;
+}
+
+button,
+a[role="button"] {
+	display:inline-block;
+	cursor: pointer;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    color: #fff;
+    background: #9C0000;
+    border-radius: 0.5em;
+}
+
+button:hover,
+a[role="button"]:hover {
+	background: #FF9191;
+}
+
+/* FIGURE */
+/*article figure {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}*/
+
+/* 7.36 Intrinsic Sizing */
+/*figure {
+	width: max-content;
+}*/
+
+article figure img {
+	width: 60%;
+	max-width: 30em;
+}
+
+.filter-effects figure {
+	width: 100%;
+	text-align: center;
+	margin: 1em;
+}
+
+.filter-effects figure img {
+	display: block;
+	border-radius: 50%;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 10em;
+}
+
+.effect-01 img {
+    -webkit-filter: opacity(70%); /* Chrome, Safari, Opera */
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncA type="table" tableValues="0 0.7" /></feComponentTransfer></filter></svg>#filter');
+    -webkit-filter: opacity(70%);
+            filter: opacity(70%);
+}
+
+.effect-02 img {
+    -webkit-filter: sepia(50%); /* Chrome, Safari, Opera */
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.6965 0.3845 0.0945 0 0 0.1745 0.8430000000000001 0.084 0 0 0.136 0.267 0.5655 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: sepia(50%);
+            filter: sepia(50%);
+}
+
+.effect-03 img {
+    -webkit-filter: saturate(50%); /* Chrome, Safari, Opera */
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.6065 0.3575 0.036 0 0 0.1065 0.8624999999999999 0.036 0 0 0.1065 0.3575 0.536 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: saturate(50%);
+            filter: saturate(50%);
+}
+
+.effect-04 img {
+    -webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.29134 0.64368 0.06498 0 0 0.19134 0.7436799999999999 0.06498 0 0 0.19134 0.64368 0.16497999999999996 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: grayscale(90%);
+            filter: grayscale(90%);
+}
+
+.effect-05 img {
+    -webkit-filter: contrast(75%); /* Chrome, Safari, Opera */
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.75" intercept="0.125" /><feFuncG type="linear" slope="0.75" intercept="0.125" /><feFuncB type="linear" slope="0.75" intercept="0.125" /></feComponentTransfer></filter></svg>#filter');
+    -webkit-filter: contrast(75%);
+            filter: contrast(75%);
+}
+
+
+/* POPUP/LAYOVER/MODAL */
+/* src = http://www.w3schools.com/cssref/sel_target.asp */
+
+/* 7.32/7.33 De-emphasizing */
+.modal-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-wrapper:target {
+	display: block;
+	position: fixed;
+}
+
+.modal-dialog {
+	margin: auto;
+	position: relative;
+	width: 95%;
+	max-width: 55em;
+	top: 1em;
+	margin-bottom: 2em;
+}
+
+/* 7.40 Vertical Centering */
+#password .modal-dialog {
+	margin: 50vh auto 0;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+#password {
+	overflow: hidden;
+}
+
+.closebtn {
+	text-decoration: none;
+	float: right;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #9C0000;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+	color: #FF9191;
+	cursor: pointer;
+}
+
+/* 
+	FOOTER
+*/
+footer {
+	width:100%;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+	padding: 2em;
+}
+
+footer section {
+	width: 100%;
+	padding: 1em;
+}
+
+footer a {
+	color: #000;
+	padding: 0.5em;
+}
+
+footer a:hover {
+	color: #FF9191;
+}
+
+pre {
+    white-space: pre-line;
+}
+
+@media (min-width: 30em) {
+	body>header {
+		width: 65%;
+	}
+
+	#password .modal-dialog {
+		width: 60%;
+		max-width: 20em;
+	}
+
+	article#profile-picture {
+		max-width: 55em;
+	}
+
+	.effects-flex {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+	}
+
+	.filter-effects figure {
+		width: 40%;
+	}
+
+	footer section {
+		width: 20%;
+	}
+}
+
+@media (min-width: 45em) {
+	body>header {
+		width: 20%;
+    	max-width: 20em;
+		min-width: 12.5em;
+	}
+
+	main {
+		width: 70%;
+	}
+
+	.filter-effects figure{
+		width: 15%;
+	}
+
+	#password .modal-dialog {
+		width: 40%;
+	}
+}
